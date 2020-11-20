@@ -1,0 +1,15 @@
+html{
+    min-height: 100vh;
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+}
+
+body{
+    background-image: url('../img/brooke-lark-08bOYnH_r_E-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
