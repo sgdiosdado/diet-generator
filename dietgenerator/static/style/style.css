@@ -13,3 +13,15 @@ body{
     background-repeat: no-repeat;
     height: 100%;
 }
+#imglogo{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#divdieta{
+    background-color: white;
+    border-radius: 20px;
+    height: 50%;
+    margin-top: 50px;
+    box-shadow: 0px 1px 4px rgb(179, 179, 179);
+}
