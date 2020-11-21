@@ -1,0 +1,357 @@
+{
+  "groups": [
+    {
+      "name": "Leguminosas y alimentos de origen animal"
+    },
+    {
+      "name": "Verduras y frutas"
+    },
+    {
+      "name": "Cereales"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Carne roja",
+      "group": 1
+    },
+    {
+      "name": "Aves",
+      "group": 1
+    },
+    {
+      "name": "Órganos internos",
+      "group": 1
+    },
+    {
+      "name": "Coles",
+      "group": 2
+    },
+    {
+      "name": "Hojas y tallos tiernos",
+      "group": 2
+    },
+    {
+      "name": "Pepónides",
+      "group": 2
+    },
+    {
+      "name": "Raíces",
+      "group": 2
+    },
+    {
+      "name": "Tallos jóvenes",
+      "group": 2
+    },
+    {
+      "name": "Frutas ácidas",
+      "group": 2
+    },
+    {
+      "name": "Frutas semiácidas",
+      "group": 2
+    },
+    {
+      "name": "Frutas dulces",
+      "group": 2
+    },
+    {
+      "name": "Nueces",
+      "group": 3
+    },
+    {
+      "name": "Semillas",
+      "group": 3
+    }
+  ],
+  "foods": [
+    {
+      "name": "Res",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [1]
+    },
+    {
+      "name": "Cerdo",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [1]
+    },
+    {
+      "name": "Cordero",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [1]
+    },
+    {
+      "name": "Ternera",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [1]
+    },
+    {
+      "name": "Pollo",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [2]
+    },
+    {
+      "name": "Gallina",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [2]
+    },
+    {
+      "name": "Pavo",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [2]
+    },
+    {
+      "name": "Pato",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [2]
+    },
+    {
+      "name": "Huevo",
+      "portion": "2",
+      "portion_unit": "piezas",
+      "categories": [2]
+    },
+    {
+      "name": "Intestino",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [3]
+    },
+    {
+      "name": "Riñón",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [3]
+    },
+    {
+      "name": "Hígado",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [3]
+    },
+    {
+      "name": "Brocoli",
+      "portion": "0.5",
+      "portion_unit": "taza",
+      "categories": [4]
+    },
+    {
+      "name": "Coles de Bruselas",
+      "portion": "0.33",
+      "portion_unit": "taza",
+      "categories": [4]
+    },
+    {
+      "name": "Coliflor",
+      "portion": "0.33",
+      "portion_unit": "taza",
+      "categories": [4]
+    },
+    {
+      "name": "Repollo",
+      "portion": "50",
+      "portion_unit": "g",
+      "categories": [4]
+    },
+    {
+      "name": "Lechuga",
+      "portion": "50",
+      "portion_unit": "g",
+      "categories": [5]
+    },
+    {
+      "name": "Espinacas",
+      "portion": "60",
+      "portion_unit": "g",
+      "categories": [5]
+    },
+    {
+      "name": "Acelgas",
+      "portion": "50",
+      "portion_unit": "g",
+      "categories": [5]
+    },
+    {
+      "name": "Calabacín",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [6]
+    },
+    {
+      "name": "Calabaza",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [6]
+    },
+    {
+      "name": "Pepino",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [6, 9]
+    },
+    {
+      "name": "Zanahoria",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [7]
+    },
+    {
+      "name": "Betabel",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [7]
+    },
+    {
+      "name": "Rábano",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [7]
+    },
+    {
+      "name": "Apio",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [8]
+    },
+    {
+      "name": "Espárrago blanco",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [8]
+    },
+    {
+      "name": "Espárrago triguero",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [8]
+    },
+    {
+      "name": "Manzana",
+      "portion": "1",
+      "portion_unit": "pieza",
+      "categories": [9, 11]
+    },
+    {
+      "name": "Naranja",
+      "portion": "1",
+      "portion_unit": "pieza",
+      "categories": [9]
+    },
+    {
+      "name": "Piña",
+      "portion": "80",
+      "portion_unit": "g",
+      "categories": [9]
+    },
+    {
+      "name": "Toronja",
+      "portion": "1",
+      "portion_unit": "pieza",
+      "categories": [9]
+    },
+    {
+      "name": "Uva",
+      "portion": "10",
+      "portion_unit": "pieza",
+      "categories": [9, 11]
+    },
+    {
+      "name": "Fresa",
+      "portion": "5",
+      "portion_unit": "pieza",
+      "categories": [10]
+    },
+    {
+      "name": "Mango",
+      "portion": "1",
+      "portion_unit": "pieza",
+      "categories": [10]
+    },
+    {
+      "name": "Tomate",
+      "portion": "0.5",
+      "portion_unit": "pieza",
+      "categories": [10]
+    },
+    {
+      "name": "Ciruela",
+      "portion": "2",
+      "portion_unit": "cucharada",
+      "categories": [11]
+    },
+    {
+      "name": "Papaya",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [11]
+    },
+    {
+      "name": "Sandía",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [11]
+    },
+    {
+      "name": "Almendra",
+      "portion": "4",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Cacahuate",
+      "portion": "10",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Cacahuate",
+      "portion": "10",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Pistacho",
+      "portion": "10",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Nuez",
+      "portion": "7",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Nuez de la india",
+      "portion": "4",
+      "portion_unit": "pieza",
+      "categories": [12]
+    },
+    {
+      "name": "Frijol",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [13]
+    },
+    {
+      "name": "Lenteja",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [13]
+    },
+    {
+      "name": "Arroz",
+      "portion": "100",
+      "portion_unit": "g",
+      "categories": [13]
+    }
+  ]
+}

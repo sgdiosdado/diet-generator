@@ -27,9 +27,10 @@ def selectFood(category, food_amount):
   return FoodSerializer(foods, many=True).data
 
 def calcPortion(imc, food_dict):
-  imc_ratio = round(imc) - 25
-  portion_ratio = 1 - (imc_ratio*2/100) if imc_ratio > 0 else 1
-  food_dict["portion"] = float(food_dict["portion"]) * portion_ratio
+  if food_dict["portion_unit"] == "g":
+    imc_ratio = round(imc) - 25
+    portion_ratio = 1 - (imc_ratio*2/100) if imc_ratio > 0 else 1
+    food_dict["portion"] = float(food_dict["portion"]) * portion_ratio
   return food_dict
 
 # ================
@@ -48,16 +49,18 @@ class GenerateDiet(APIView):
       serializer = GenerateDietSerializer(request.data)
       data = serializer.data
       imc = float(data["weight"]) / (float(data["height"])/100)**2
-      categories_per_group = {}
+      categories_per_group = []
 
       for group in Group.objects.all():
-        categories_per_group[group.name] = selectCategories(group.id, data["exclude_categories"], 1)
-        for category in categories_per_group[group.name]:
+        group_dict = {}
+        group_dict["name"] = group.name
+        group_dict["categories"] = selectCategories(group.id, data["exclude_categories"], 1)
+        for category in group_dict["categories"]:
           category_id = category["id"]
           foods = selectFood(category_id, 2)
           foods = map(lambda x: calcPortion(imc, x), foods)
           category["foods"] = foods
-      
+        categories_per_group.append(group_dict)
       return Response(categories_per_group)
     except:
       return Response({}, status=status.HTTP_400_BAD_REQUEST)
