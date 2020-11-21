@@ -27,16 +27,67 @@
   <div class="row">
     <div class="col s6 offset-s3" id="divdieta">
       <div class="row">
-        <form >
-          <div class="input-field col s12">
-            <select id="exlcudes" multiple>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-            <label>Materialize Multiple Select</label>
+          <div>
+              <p class="center-align">Calcula tu IMC!</p>
           </div>
+          <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s4 offset-m1" id="IMC" onchange="getBMI()">
+                        <input id="Peso" type="number" class="validate">
+                        <label for="Peso">Peso en kg</label>
+                      </div>
+                    <div class="input-field col s4 offset-m1" onchange="getBMI()">
+                      <input id="Estatura" type="number" class="validate">
+                      <label for="Estatura">Estatura en cm</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4 offset-m4">
+                        <input disabled value="IMC" id="IMCres" type="text" class="validate">
+                        <label id="IMCLabel" for="disabled">Tu IMC es:</label>
+                      </div>
+                </div>
+            </form>
+          </div>
+          <hr>
+        <form>
+            <div>
+                <h5 class="center-align">Verduras y Frutas</h5>
+            </div>
+            <div class="input-field col s12">
+                <select id="exlcudes" multiple>
+                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Verduras y Frutas que deseas excluir</label>
+            </div>
+            <div>
+                <h5 class="center-align">Cereales</h5>
+            </div>
+            <div class="input-field col s12">
+                <select id="exlcudes" multiple>
+                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Cereales que deseas excluir</label>
+            </div>
+            <div>
+                <h5 class="center-align">Leguminosas y Alimentos de Origen Animal</h5>
+            </div>
+            <div class="input-field col s12">
+                <select id="exlcudes" multiple>
+                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Leguminosas y Aliemntos de Origen Animal que deseas excluir</label>
+            </div>
         </form>
       </div>
     </div>
