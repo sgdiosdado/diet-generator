@@ -1,0 +1,24 @@
+html, body {
+    min-height: 100vh;
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+}
+
+body {
+    display: block;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    background: url("../img/background.jpg") center / cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+    opacity: 0.5;
+}
