@@ -1,98 +1,105 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="{% static 'favicon.ico' %}"
+		/>
 
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-  <!--Import materialize.css-->
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="{% static 'style/style.css' %}">
-  <title>PlaceHolder</title>
-</head>
-<body>
-  <!--Navbar-->
-  <nav class="green darken-1">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo left"><img id="imglogo" src="{%static 'img/dieta.png'%}" alt="Logo" style="height: 40px; width: 40px;">PlaceHolder</a>
-    </div>
-  </nav>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
 
-  <div class="row">
-    <div class="col s6 offset-s3" id="divdieta">
-      <div class="row">
-          <div>
-              <p class="center-align">Calcula tu IMC!</p>
-          </div>
-          <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s4 offset-m1" id="IMC" onchange="getBMI()">
-                        <input id="Peso" type="number" class="validate">
-                        <label for="Peso">Peso en kg</label>
-                      </div>
-                    <div class="input-field col s4 offset-m1" onchange="getBMI()">
-                      <input id="Estatura" type="number" class="validate">
-                      <label for="Estatura">Estatura en cm</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s4 offset-m4">
-                        <input disabled value="IMC" id="IMCres" type="text" class="validate">
-                        <label id="IMCLabel" for="disabled">Tu IMC es:</label>
-                      </div>
-                </div>
-            </form>
-          </div>
-          <hr>
-        <form>
-            <div>
-                <h5 class="center-align">Verduras y Frutas</h5>
-            </div>
-            <div class="input-field col s12">
-                <select id="exlcudes" multiple>
-                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Verduras y Frutas que deseas excluir</label>
-            </div>
-            <div>
-                <h5 class="center-align">Cereales</h5>
-            </div>
-            <div class="input-field col s12">
-                <select id="exlcudes" multiple>
-                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Cereales que deseas excluir</label>
-            </div>
-            <div>
-                <h5 class="center-align">Leguminosas y Alimentos de Origen Animal</h5>
-            </div>
-            <div class="input-field col s12">
-                <select id="exlcudes" multiple>
-                    <option value="" disabled selected>Selecciona los alimentos que quieres excluir</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Leguminosas y Aliemntos de Origen Animal que deseas excluir</label>
-            </div>
-        </form>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+		<link rel="stylesheet" href="{% static 'style/style.css' %}" />
+		<title>Diet Generator</title>
+	</head>
+	<body>
+
+    <div id="modal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h2 class="text-4xl mb-4">Recomendación</h2>
+        <div id="modal-content"></div>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat">Entendido</a>
       </div>
     </div>
-  </div>
-  <script src="{% static 'js/main.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+
+		<!--Navbar-->
+		<nav>
+			<div class="nav-wrapper green darken-3">
+				<a href="#!" class="brand-logo"
+					><i class="material-icons">spa</i>Diet Generator</a
+				>
+			</div>
+		</nav>
+
+		<div class="">
+			<div class="w-full md:w-2/3 mr-auto ml-auto">
+				<div class="card white">
+					<div class="card-content">
+            <span class="card-title">Dieta</span>
+						<div class="row flex items-center">
+              <div class="flex flex-col w-3/5">
+                <div 
+                  class="input-field">
+                  <input
+                    id="weight"
+                    type="number"
+                    class="validate imc-field">
+                  <label for="weight">Peso (kg)</label>
+                </div>
+                <div 
+                  class="input-field">
+                  <input
+                    id="height"
+                    type="number"
+                    class="validate imc-field">
+                  <label for="height">Estatura en cm</label>
+                </div>
+              </div>
+              <div
+                id="imc"
+                class="text-4xl flex justify-center items-center w-2/5">
+                IMC
+              </div>
+            </div>
+            <section>
+              <h2 class="text-2xl mb-6">Elige los grupos que no te gusten</h2>
+              <div
+                id="excludes"
+                class="row grid gap-4 lg:grid-cols-3 md:grid-cols-2">
+              </div>
+            </section>
+            <section class="card-action" style="padding-left: 0">
+              <button 
+                class="btn waves-effect waves-light"
+                type="submit"
+                id="getRecommendation">
+                Obtener sugerencia
+                <i class="material-icons right">send</i>
+              </button>
+            </section>
+					</div>
+				</div>
+			</div>
+    </div>
+
+    <script type="module" src="{% static 'js/main.js' %}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
 </html>

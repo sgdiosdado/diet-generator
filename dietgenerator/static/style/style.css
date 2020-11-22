@@ -1,4 +1,4 @@
-html{
+html, body {
     min-height: 100vh;
 }
 
@@ -6,22 +6,19 @@ html{
     color: white;
 }
 
-body{
-    background-image: url('../img/brooke-lark-08bOYnH_r_E-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-}
-#imglogo{
-    margin-left: 10px;
-    margin-right: 10px;
+body {
+    display: block;
+    position: relative;
 }
 
-#divdieta{
-    background-color: white;
-    border-radius: 20px;
-    height: 50%;
-    margin-top: 50px;
-    box-shadow: 0px 1px 4px rgb(179, 179, 179);
+body::after {
+    content: "";
+    background: url("../img/background.jpg") center / cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+    opacity: 0.5;
 }
